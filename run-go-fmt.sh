@@ -26,7 +26,7 @@ exit_code=0
 
 echo -ne "Checking for files that need gofmt... "
 files_need_gofmt=()
-files=($(git diff --cached --name-only --diff-filter ACM | grep "\.go" | grep -v -e "vendor"))
+files=($(git diff --cached --name-only --diff-filter ACM | grep ".go$" | grep -v -e "vendor"))
 for file in "${files[@]}"; do
     # Check for files that fail gofmt.
     disable="$(grep @formatter:off $file)"
