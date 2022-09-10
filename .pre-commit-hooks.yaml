@@ -4,3 +4,10 @@
     files: '\.go$'
     language: 'script'
     description: "Runs `gofmt`, requires golang"
+
+-   id: go-test
+    name: 'go-test'
+    entry: run-go-test.sh
+    files: '\.go$'
+    language: 'script'
+    description: "Runs `go test`"
